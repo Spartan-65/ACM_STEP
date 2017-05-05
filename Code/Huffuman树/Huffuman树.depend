@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1488285131 source:/home/albertliu/Documents/Code/Huffuman树/main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

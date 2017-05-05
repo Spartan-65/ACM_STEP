@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1488295153 source:/home/albertliu/Documents/Code/回形取数/main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+
