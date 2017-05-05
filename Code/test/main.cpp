@@ -1,75 +1,42 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <bits/stdc++.h>
 
-const int N=20;   //最多放皇后的个数
-int q[N];         //各皇后所在的行号
-int cont = 0;     //统计解得个数
-//输出一个解
-void print(int n)
+using namespace std;
+
+int n,m;
+int M[105][105],v[105][105];
+int Max;
+int dir[4][2]={0,1,1,0,-1,0,0,-1};
+
+void dfs(int x, int y, int Count)
 {
-    int i,j;
-    cont++;
-    printf("第%d个解：",cont);
-    for(i=1;i<=n;i++)
-        printf("(%d,%d) ",i,q[i]);
-    printf("\n");
-    for(i=1;i<=n;i++)        //行
+    if(x<0||y<0||x>=n||y>=m) return ;
+    if(Count>v[x][y]) v[x][y]=Count;
+    else return ;
+    for(int i = 0;i<4;i++)
     {
-        for(j=1;j<=n;j++)    //列
-        {
-            if(q[i]!=j)
-                printf("x ");
-            else
-                printf("Q ");
-        }
-        printf("\n");
+        int tx=dir[i][0]+x,ty=dir[i][1]+y;
+        if(M[tx][ty]<M[x][y]) dfs(tx,ty,Count+1);
     }
-}
-//检验第i行的k列上是否可以摆放皇后
-int find(int i,int k)
-{
-    int j=1;
-    while(j<i)  //j=1~i-1是已经放置了皇后的行
-    {
-        //第j行的皇后是否在k列或(j,q[j])与(i,k)是否在斜线上
-        if(q[j]==k || abs(j-i)==abs(q[j]-k))
-            return 0;
-        j++;
-    }
-    return 1;
-}
-//放置皇后到棋盘上
-void place(int k,int n)
-{
-    int j;
-    if(k>n)
-        print(n);
-    else
-    {
-        for(j=1;j<=n;j++)   //试探第k行的每一个列
-        {
-            if(find(k,j))
-            {
-                q[k] = j;
-                place(k+1,n);  //递归总是在成功完成了上次的任务的时候才做下一个任务
-            }
-        }
-    }
+    Max=Max>Count?Max:Count;
 }
 
-int main(void)
+
+int main()
 {
-    int n;
-    printf("请输入皇后的个数(n<=20),n=:");
-    scanf("%d",&n);
-    if(n>20)
-        printf("n值太大，不能求解!\n");
-    else
+    cin>>n>>m;
+    int mi,mj;
+    for(int i = 0;i<n;i++)
+        for(int j = 0;j<m;j++)
+        {
+            scanf("%d",&M[i][j]);
+        }
+    Max=0;
+    memset(v,0,sizeof(v));
+    for(int i = 0;i<n;i++)
     {
-        printf("%d皇后问题求解如下(每列的皇后所在的行数):\n",n);
-        place(1,n);        //问题从最初状态解起
-        printf("\n");
+        for(int j = 0;j<m;j++)
+            if(!v[i][j]) dfs(i,j,1);
     }
-    system("pause");
+    cout<<Max<<endl;
     return 0;
 }

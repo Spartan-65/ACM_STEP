@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1479629426 source:d:\code\codeblocks\uva 400\main.cpp
+	<iostream>
+	<string>
+	<set>
+	<algorithm>
+	<cstdio>
+	<bits/stdc++.h>
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1480773980 source:d:\code\codeblocks\uva 11988\main.cpp
+	<iostream>
+	<set>
+	<algorithm>
+	<cstdio>
+	<string>
+	<vector>
+	<map>
+	<queue>
+	<list>
+	<cstring>
+

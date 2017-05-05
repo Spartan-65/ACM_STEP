@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1480514365 source:d:\code\codeblocks\uva 210\main.cpp
+	<cstdio>
+	<queue>
+	<cstring>
+	<cstdlib>
+	<cctype>
+

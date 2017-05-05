@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1484890426 source:d:\code\codeblocks\uva 297\main.cpp
+	<cstdio>
+	<cstring>
+
