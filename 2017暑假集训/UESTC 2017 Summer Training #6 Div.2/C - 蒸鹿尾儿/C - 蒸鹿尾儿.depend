@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1499936215 source:d:\acm\2017Êî¼Ù¼¯Ñµ\uestc 2017 summer training #6 div.2\c - ÕôÂ¹Î²¶ù\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<vector>
+	<cstring>
+	<cstdio>
+	<bits/stdc++.h>
+

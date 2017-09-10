@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1496068790 source:d:\acm\poj\a simple problem with integers 3468\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

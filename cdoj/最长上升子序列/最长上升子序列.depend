@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1496149926 source:d:\acm\cdoj\最长上升子序列\main.cpp
+	<iostream>
+	<algorithm>
+	<bits/stdc++.h>
+

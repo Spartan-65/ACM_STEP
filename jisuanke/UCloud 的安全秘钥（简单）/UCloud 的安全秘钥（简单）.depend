@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1496497706 source:d:\acm\jisuanke\ucloud 的安全秘钥（简单）\main.cpp
+	<queue>
+	<deque>
+	<iostream>
+
