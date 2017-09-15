@@ -38,11 +38,12 @@ struct node{
         up(k);
     }
     void mo(int a,int x){modify(1,sz,a,1,x);}
-    void query(int a,int b){query(a,b,1,sz,1);}
+    void qu(int a,int b){query(a,b,1,sz,1);}
 }T[K][K];
 
 int main()
 {
+    //freopen("test.in","r",stdin);
     int n,m;
     scanf("%d",&n);
     for(int i=1;i<=n;i++) scanf("%d",&val[i]);
@@ -77,11 +78,12 @@ int main()
         }
         else{
             if(b>=K){
-                int ans=-1e9;
+                ans=-1e9;
                 for(int i=a;i<=n;i+=b)
                 {
                     ans=max(ans,val[i]);
                 }
+                printf("%d\n",ans);
                 continue;
             }
             int i=b;
@@ -89,10 +91,9 @@ int main()
             int k=a/b+1;
             if(!j){j=b;k--;}
             ans=-1e9;
-            cout<<i<<' '<<j<<' '<<k<<endl;
-            T[i][j].query(k,T[i][j].sz,1,T[i][j].sz,1);
+            //cout<<i<<' '<<j<<' '<<k<<endl;
+            T[i][j].qu(k,T[i][j].sz);
             printf("%d\n",ans);
-            cout<<endl;
         }
     }
     return 0;
