@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include <windows.h>
+//#include <windows.h>
 using namespace std;
 const int maxm=1005;
 const int maxn=208;
